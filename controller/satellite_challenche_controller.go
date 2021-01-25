@@ -13,6 +13,7 @@ func InitSatelliteChallengeRoutes(router *mux.Router) {
 	router.HandleFunc("/topsecret", PostTopSecretInputMessages).Methods("POST")
 	router.HandleFunc("/topsecret_split/{satellite_name}", PostSatelliteMessageByName).Methods("POST")
 	router.HandleFunc("/topsecret_split", GetMessageFromLoadedSatellites).Methods("GET")
+	router.HandleFunc("/topsecret_split", ClearLoadedSatellites).Methods("DELETE")
 }
 
  func PostTopSecretInputMessages(w http.ResponseWriter, req *http.Request) {
@@ -49,4 +50,10 @@ func GetMessageFromLoadedSatellites(w http.ResponseWriter, req *http.Request) {
 		w.WriteHeader(404)
 	}
 	json.NewEncoder(w).Encode(response)
+}
+
+func ClearLoadedSatellites(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	service.ClearSatellites()
+	w.WriteHeader(200)
 }

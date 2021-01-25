@@ -15,3 +15,7 @@ func RetrieveSavedSatellites() model.TopSecretInputMessages{
 	}
 	return model.TopSecretInputMessages{Satellites: satellites}
 }
+
+func ClearSatellites() {
+	Satellites = make(map[string]model.SatelliteIncomingMessage)
+}
