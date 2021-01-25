@@ -4,6 +4,7 @@ import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
+	"os"
 	"quasar-backend/constants"
 	"quasar-backend/controller"
 	"quasar-backend/service"
@@ -23,5 +24,10 @@ func main() {
 	controller.InitSatelliteChallengeRoutes(myRouter)
 
 	log.Println("Listing for requests at http://localhost:8080/")
-	log.Fatal(http.ListenAndServe(":8080", myRouter))
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	log.Fatal(http.ListenAndServe(":" + port, myRouter))
 }
