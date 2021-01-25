@@ -1,0 +1,4 @@
+github.com/MindorksOpenSource/gogeom v0.0.0-20190206120254-bbbf10fd0352 h1:65GRhychReIMwBAWsdTGxa58pn8+tHY3TPu9Fhzs7PY=
+github.com/MindorksOpenSource/gogeom v0.0.0-20190206120254-bbbf10fd0352/go.mod h1:AhgrlR/l6BwGFMtHHj3jjA5k9YQ0wQszIS7w0b/vWe0=
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
