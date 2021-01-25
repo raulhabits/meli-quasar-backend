@@ -10,7 +10,7 @@ For using this Golang service you should have installed at least the **go1.15.7*
 **Notes.** 
 1. This service has some differences regarding the original specifications, because the developer tried to gain a better precision using **float64** datatypes instead of **float32** suggested in the exercice.
 2. The developer used the library github.com/MindorksOpenSource/gogeom for working with geometries, because the problem was reduced to a point which intercepts all the circles could be drawn using the satellite position, and the distance provided.
-3. If you would like check the service behaviour you could download the postman collection available in **https://www.getpostman.com/collections/cace2c9cc5d8178bb32c** or check the 
+3. If you would like check the service behaviour you could download the postman collection available in **https://www.getpostman.com/collections/cace2c9cc5d8178bb32c** 
 
 **Enjoy your day**
 
